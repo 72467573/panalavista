@@ -13,13 +13,13 @@ com.example.practica_3.app-lifecycle-viewmodel-2.6.1-11 C:\Users\Diego J\.gradle
 com.example.practica_3.app-core-runtime-2.2.0-12 C:\Users\Diego J\.gradle\caches\transforms-3\db3ce0e4102f75753fdc0e9c2753a822\transformed\core-runtime-2.2.0\res
 com.example.practica_3.app-lifecycle-runtime-2.6.1-13 C:\Users\Diego J\.gradle\caches\transforms-3\e97fce397db1acf9b6f475dedfc7d654\transformed\lifecycle-runtime-2.6.1\res
 com.example.practica_3.app-lifecycle-livedata-core-2.6.1-14 C:\Users\Diego J\.gradle\caches\transforms-3\eed11806d4af25229ebcb855da7e9479\transformed\lifecycle-livedata-core-2.6.1\res
-com.example.practica_3.app-debug-15 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\android\app\src\debug\res
-com.example.practica_3.app-main-16 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\android\app\src\main\res
-com.example.practica_3.app-pngs-17 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\app\generated\res\pngs\debug
-com.example.practica_3.app-resValues-18 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\app\generated\res\resValues\debug
-com.example.practica_3.app-rs-19 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\app\generated\res\rs\debug
-com.example.practica_3.app-mergeDebugResources-20 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.practica_3.app-mergeDebugResources-21 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.practica_3.app-merged_res-22 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\app\intermediates\merged_res\debug
-com.example.practica_3.app-packaged_res-23 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
-com.example.practica_3.app-packaged_res-24 C:\Users\Diego J\Desktop\CERTUS_clases\CURSOS\3 Ciclo\Implementacion plataformas moviles\AA2\pan_a_la_vista\build\image_picker_android\intermediates\packaged_res\debug
+com.example.practica_3.app-debug-15 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\android\app\src\debug\res
+com.example.practica_3.app-main-16 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\android\app\src\main\res
+com.example.practica_3.app-pngs-17 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\app\generated\res\pngs\debug
+com.example.practica_3.app-resValues-18 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\app\generated\res\resValues\debug
+com.example.practica_3.app-rs-19 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\app\generated\res\rs\debug
+com.example.practica_3.app-mergeDebugResources-20 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\app\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.example.practica_3.app-mergeDebugResources-21 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\app\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.example.practica_3.app-merged_res-22 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\app\intermediates\merged_res\debug
+com.example.practica_3.app-packaged_res-23 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\flutter_plugin_android_lifecycle\intermediates\packaged_res\debug
+com.example.practica_3.app-packaged_res-24 C:\Users\Diego J\Documents\GitHub\panalavista\panalavista\build\image_picker_android\intermediates\packaged_res\debug

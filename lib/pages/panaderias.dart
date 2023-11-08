@@ -25,7 +25,7 @@ class MiPanaderia extends StatelessWidget {
             ),
           )
         ],
-        backgroundColor: const Color.fromARGB(150, 21, 216, 118),
+        backgroundColor: Colors.orangeAccent,
       ),
       drawer: Drawer(child: MyDrawer()),
       body: ListView(
@@ -49,7 +49,7 @@ class MiPanaderia extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromARGB(150, 21, 216, 118),
+        color: Colors.orangeAccent,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

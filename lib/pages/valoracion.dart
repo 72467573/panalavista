@@ -9,7 +9,7 @@ class MyValoracion extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("COMENTARIOS"),
-        backgroundColor: const Color.fromARGB(150, 21, 216, 118),
+        backgroundColor: Colors.orangeAccent,
       ),
       drawer: Drawer(child: MyDrawer()),
       body: ListView(
@@ -27,7 +27,7 @@ class MyValoracion extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.brown,
         child: Icon(
           Icons.add_comment,
           size: 30,

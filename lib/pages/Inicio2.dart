@@ -10,7 +10,7 @@ class MyLogeo extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Panaderías disponibles"),
-        backgroundColor: Color.fromARGB(150, 21, 216, 118),
+        backgroundColor: Colors.orangeAccent,
       ),
       drawer: Drawer(
         child: MyDrawer(),

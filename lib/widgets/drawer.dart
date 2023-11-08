@@ -28,7 +28,7 @@ class _MyDrawerState extends State<MyDrawer> {
                   "assets/images/logo.jpg",
                 )),
               ),
-              decoration: BoxDecoration(color: Colors.green),
+              decoration: BoxDecoration(color: Colors.orangeAccent),
             ),
             ListTile(
               leading: Icon(Icons.home),

@@ -18,7 +18,7 @@ class _MyUbicacionState extends State<MyUbicacion> {
                 color: Colors.white,
               )),
           toolbarHeight: 57,
-          backgroundColor: Color.fromARGB(150, 21, 216, 118),
+          backgroundColor: Colors.orangeAccent,
           shadowColor: Colors.black,
           elevation: 14,
           //shadowColor: Colors.white,
