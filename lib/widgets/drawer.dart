@@ -25,10 +25,11 @@ class _MyDrawerState extends State<MyDrawer> {
               currentAccountPicture: CircleAvatar(
                 child: ClipOval(
                     child: Image.asset(
-                  "assets/images/logo.jpg",
+                  "assets/images/barco.jpg",
                 )),
               ),
-              decoration: BoxDecoration(color: Colors.orangeAccent),
+              decoration:
+                  BoxDecoration(color: Color.fromARGB(255, 231, 161, 31)),
             ),
             ListTile(
               leading: Icon(Icons.home),

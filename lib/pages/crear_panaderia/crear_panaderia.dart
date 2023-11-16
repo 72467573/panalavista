@@ -27,8 +27,8 @@ class _CrearPanaderiaState extends State<CrearPanaderia> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Da inicio a tu gran negocio Creemos juntos"),
-        backgroundColor: Color.fromARGB(150, 21, 216, 118),
+        title: const Text("Creemos juntos"),
+        backgroundColor: Color.fromARGB(255, 136, 59, 0),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -45,7 +45,7 @@ class _CrearPanaderiaState extends State<CrearPanaderia> {
                           imagen_tu_upload = File(imagen!.path);
                         });
                       },
-                      child: const Text("Seleccionar imagen")),
+                      child: const Text("Subir imagen")),
               // Portada
               // Aquí puedes agregar un widget para cargar o elegir una imagen de portada
 

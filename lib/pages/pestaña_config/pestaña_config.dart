@@ -20,7 +20,7 @@ class _MyPestanaConfig extends State<MyPestanaConfig> {
                 color: Colors.white,
               )),
           toolbarHeight: 57,
-          backgroundColor: Colors.orangeAccent,
+          backgroundColor: Color.fromARGB(255, 136, 59, 0),
           leading: const Icon(
             Icons.account_circle,
             color: Color.fromARGB(252, 0, 0, 0),

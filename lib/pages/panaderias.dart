@@ -25,7 +25,7 @@ class MiPanaderia extends StatelessWidget {
             ),
           )
         ],
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Color.fromARGB(255, 136, 59, 0),
       ),
       drawer: Drawer(child: MyDrawer()),
       body: ListView(
@@ -49,7 +49,7 @@ class MiPanaderia extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Colors.orangeAccent,
+        color: Color.fromARGB(255, 136, 59, 0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -75,7 +75,7 @@ class MiPanaderia extends StatelessWidget {
     return Container(
       height: 120,
       margin: const EdgeInsets.all(10.0),
-      color: Color.fromARGB(255, 226, 197, 2),
+      color: Color.fromARGB(255, 232, 221, 144),
       padding: const EdgeInsets.all(16.0),
       child: Row(
         children: [

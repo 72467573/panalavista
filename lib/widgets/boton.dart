@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica_3/pages/Inicio2.dart';
+import 'package:practica_3/pages/login.dart';
 
 class MyBotonInicio extends StatefulWidget {
   const MyBotonInicio({super.key});
@@ -17,7 +18,7 @@ class _MyBotonInicioState extends State<MyBotonInicio> {
           FilledButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => MyLogeo(),
+                builder: (context) => MyLoginDeInicio(),
               ));
             },
             child: Text(
@@ -25,7 +26,8 @@ class _MyBotonInicioState extends State<MyBotonInicio> {
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.green)),
+                backgroundColor: MaterialStateProperty.all(
+                    Color.fromARGB(255, 152, 56, 21))),
           ),
         ],
       ),

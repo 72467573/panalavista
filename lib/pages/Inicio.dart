@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 image: AssetImage("assets/images/portada.jpg"),
                 fit: BoxFit.cover)),
         child: Scaffold(
-          backgroundColor: Colors.orangeAccent,
+          backgroundColor: Color.fromARGB(255, 136, 59, 0),
           body: Container(
             decoration: BoxDecoration(
               image: DecorationImage(

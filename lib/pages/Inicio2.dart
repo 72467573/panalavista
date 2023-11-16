@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica_3/pages/pestana_inicio2/mapita.dart';
 import 'package:practica_3/pages/pestana_inicio2/pedidos.dart';
-import 'package:practica_3/widgets/para_inicio/barra_Busqueda.dart';
 import 'package:practica_3/widgets/drawer.dart';
 
 class MyLogeo extends StatefulWidget {
@@ -20,14 +19,14 @@ class _MyLogeoState extends State<MyLogeo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Panaderías disponibles"),
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Color.fromARGB(255, 165, 80, 15),
       ),
       drawer: Drawer(
         child: MyDrawer(),
       ),
       body: _paginas[_paginActual],
       bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.orangeAccent,
+          backgroundColor: Color.fromARGB(255, 165, 80, 15),
           selectedItemColor: Colors.black,
           onTap: (index) {
             setState(() {
@@ -36,9 +35,16 @@ class _MyLogeoState extends State<MyLogeo> {
           },
           currentIndex: _paginActual,
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Mapa"),
             BottomNavigationBarItem(
-                icon: Icon(Icons.favorite), label: "Favoritos")
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              label: "Mapa",
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite, color: Colors.white),
+                label: "Favoritos")
           ]),
     );
   }
