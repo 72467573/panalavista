@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practica_3/pages/pestana_inicio2/mapita.dart';
-import 'package:practica_3/pages/pestana_inicio2/pedidos.dart';
+import 'package:practica_3/pages/pestana_inicio2/Favoritos.dart';
 import 'package:practica_3/widgets/drawer.dart';
 
 class MyLogeo extends StatefulWidget {
@@ -12,7 +12,7 @@ class MyLogeo extends StatefulWidget {
 
 class _MyLogeoState extends State<MyLogeo> {
   int _paginActual = 0;
-  List<Widget> _paginas = [MyMapita(), MyPedidos()];
+  List<Widget> _paginas = [MyMapita(), MyFavoritos()];
 
   @override
   Widget build(BuildContext context) {

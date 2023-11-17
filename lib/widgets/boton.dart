@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:practica_3/pages/Inicio2.dart';
 import 'package:practica_3/pages/login.dart';
 
 class MyBotonInicio extends StatefulWidget {
