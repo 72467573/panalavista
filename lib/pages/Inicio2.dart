@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practica_3/pages/pestana_inicio2/mapita.dart';
 import 'package:practica_3/pages/pestana_inicio2/Favoritos.dart';
+import 'package:practica_3/pages/pestana_inicio2/mapita.dart';
 import 'package:practica_3/widgets/drawer.dart';
 
 class MyLogeo extends StatefulWidget {
