@@ -5,14 +5,14 @@ import 'package:image_picker/image_picker.dart';
 import 'package:practica_3/pages/crear_panaderia/select_image.dart';
 
 class CrearPanaderia extends StatefulWidget {
-  const CrearPanaderia({super.key});
+  const CrearPanaderia({Key? key}) : super(key: key);
 
   @override
   _CrearPanaderiaState createState() => _CrearPanaderiaState();
 }
 
 class _CrearPanaderiaState extends State<CrearPanaderia> {
-  File? imagen_tu_upload;
+  File? imagenTuUpload;
 
   String nombrePanaderia = "";
   String correo = "";
@@ -20,8 +20,11 @@ class _CrearPanaderiaState extends State<CrearPanaderia> {
   String ubicacion = "";
   String descripcion = "";
   String horarioAtencion = "";
+  DateTime? fechaInicio;
+  DateTime? fechaFin;
   List<String> productosOfrecidos = [];
   TextEditingController productoController = TextEditingController();
+  TextEditingController descripcionController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -35,22 +38,8 @@ class _CrearPanaderiaState extends State<CrearPanaderia> {
           padding: const EdgeInsets.all(16.0),
           child: Column(
             children: [
-              imagen_tu_upload != null
-                  ? Image.file(imagen_tu_upload!)
-                  : ElevatedButton(
-                      onPressed: () async {
-                        // ignore: unused_local_variable
-                        final XFile? imagen = await getImage();
-                        setState(() {
-                          imagen_tu_upload = File(imagen!.path);
-                        });
-                      },
-                      child: const Text("Subir imagen")),
-              // Portada
-              // Aquí puedes agregar un widget para cargar o elegir una imagen de portada
-
+              _buildImageWidget(),
               SizedBox(height: 20),
-
               _buildTextField("Nombre de la panadería", nombrePanaderia,
                   (value) => nombrePanaderia = value),
               _buildTextField("Correo", correo, (value) => correo = value),
@@ -58,59 +47,55 @@ class _CrearPanaderiaState extends State<CrearPanaderia> {
                   "Teléfono", telefono, (value) => telefono = value),
               _buildTextField("Ubicación de la panadería", ubicacion,
                   (value) => ubicacion = value),
-
               SizedBox(height: 20),
-
-              // Productos ofrecidos
-              Text("Productos que ofrece:"),
-              Column(
-                children: productosOfrecidos.map((producto) {
-                  return Text(producto);
-                }).toList(),
-              ),
-              TextFormField(
-                controller: productoController,
-                decoration: InputDecoration(
-                  labelText: 'Agregar producto',
-                  suffixIcon: IconButton(
-                    icon: Icon(Icons.add),
-                    onPressed: () {
-                      setState(() {
-                        String producto = productoController.text;
-                        if (producto.isNotEmpty) {
-                          productosOfrecidos.add(producto);
-                          productoController.clear();
-                        }
-                      });
-                    },
-                  ),
-                ),
-              ),
-
+              _buildProductList(),
+              _buildAddProductTextField(),
               SizedBox(height: 20),
-
+              _buildDateSelector(
+                title: 'Seleccionar fecha de inicio',
+                fechaSeleccionada: fechaInicio,
+                onDateSelected: (selectedDate) {
+                  setState(() {
+                    fechaInicio = selectedDate;
+                  });
+                },
+              ),
+              SizedBox(height: 20),
+              _buildDateSelector(
+                title: 'Seleccionar fecha de fin',
+                fechaSeleccionada: fechaFin,
+                onDateSelected: (selectedDate) {
+                  setState(() {
+                    fechaFin = selectedDate;
+                  });
+                },
+              ),
+              SizedBox(height: 20),
               _buildTextField("Horario de atención", horarioAtencion,
                   (value) => horarioAtencion = value),
-
               SizedBox(height: 20),
-
-              _buildTextField("Descripción breve", descripcion,
-                  (value) => descripcion = value),
-
+              _buildDescriptionTextField(),
               SizedBox(height: 20),
-
-              // Botón para guardar los datos
-              ElevatedButton(
-                onPressed: () {
-                  // Aquí puedes guardar los datos ingresados
-                },
-                child: Text("Guardar"),
-              ),
+              _buildSaveButton(),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Widget _buildImageWidget() {
+    return imagenTuUpload != null
+        ? Image.file(imagenTuUpload!)
+        : ElevatedButton(
+            onPressed: () async {
+              final XFile? imagen = await getImage();
+              setState(() {
+                imagenTuUpload = File(imagen!.path);
+              });
+            },
+            child: const Text("Subir imagen"),
+          );
   }
 
   Widget _buildTextField(
@@ -125,6 +110,90 @@ class _CrearPanaderiaState extends State<CrearPanaderia> {
         decoration: InputDecoration(labelText: label),
         onChanged: onChanged,
       ),
+    );
+  }
+
+  Widget _buildProductList() {
+    return Column(
+      children: productosOfrecidos.map((producto) {
+        return Text(producto);
+      }).toList(),
+    );
+  }
+
+  Widget _buildAddProductTextField() {
+    return TextFormField(
+      controller: productoController,
+      decoration: InputDecoration(
+        labelText: 'Agregar producto',
+        suffixIcon: IconButton(
+          icon: Icon(Icons.add),
+          onPressed: () {
+            setState(() {
+              String producto = productoController.text;
+              if (producto.isNotEmpty) {
+                productosOfrecidos.add(producto);
+                productoController.clear();
+              }
+            });
+          },
+        ),
+      ),
+    );
+  }
+
+  Widget _buildDateSelector({
+    required String title,
+    DateTime? fechaSeleccionada,
+    required Function(DateTime) onDateSelected,
+  }) {
+    return ListTile(
+      title: Text(title),
+      subtitle: fechaSeleccionada != null
+          ? Text(
+              '${fechaSeleccionada.day}/${fechaSeleccionada.month}/${fechaSeleccionada.year}')
+          : Text('Seleccione la fecha'),
+      onTap: () async {
+        DateTime? selectedDate = await showDatePicker(
+          context: context,
+          initialDate: DateTime.now(),
+          firstDate: DateTime.now(),
+          lastDate: DateTime(DateTime.now().year + 5),
+        );
+
+        if (selectedDate != null) {
+          onDateSelected(selectedDate);
+        }
+      },
+    );
+  }
+
+  Widget _buildDescriptionTextField() {
+    return Container(
+      padding: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: TextFormField(
+        controller: descripcionController,
+        maxLines: 5,
+        decoration: InputDecoration(labelText: 'Descripción breve'),
+        onChanged: (value) {
+          setState(() {
+            descripcion = value;
+          });
+        },
+      ),
+    );
+  }
+
+  Widget _buildSaveButton() {
+    return ElevatedButton(
+      onPressed: () {
+        // Aquí puedes guardar los datos ingresados
+      },
+      child: Text("Guardar"),
     );
   }
 }

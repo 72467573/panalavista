@@ -164,6 +164,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "intl",
+      "rootUri": "file:///C:/Users/Diego%20J/AppData/Local/Pub/Cache/hosted/pub.dev/intl-0.18.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "js",
       "rootUri": "file:///C:/Users/Diego%20J/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
@@ -212,6 +218,12 @@
       "languageVersion": "2.19"
     },
     {
+      "name": "simple_gesture_detector",
+      "rootUri": "file:///C:/Users/Diego%20J/AppData/Local/Pub/Cache/hosted/pub.dev/simple_gesture_detector-0.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/Users/Diego%20J/Desktop/CERTUS_clases/CURSOS/3%20Ciclo/Implementacion%20plataformas%20moviles/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -240,6 +252,12 @@
       "rootUri": "file:///C:/Users/Diego%20J/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
+    },
+    {
+      "name": "table_calendar",
+      "rootUri": "file:///C:/Users/Diego%20J/AppData/Local/Pub/Cache/hosted/pub.dev/table_calendar-3.0.9",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "term_glyph",
@@ -278,7 +296,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2023-11-23T15:47:17.575139Z",
+  "generated": "2023-11-23T15:48:22.698322Z",
   "generator": "pub",
   "generatorVersion": "3.1.0"
 }
